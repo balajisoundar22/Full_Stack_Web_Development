@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-do List Application</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>To-do List</h1>
+		<form>
+			<label for="task">Task:</label>
+			<input type="text" id="task" name="task">
+			<input type="button" value="Add" onclick="addTask()">
+		</form>
+		<textarea id="taskList" rows="10" readonly></textarea>
+		<label for="nextTask">Next Task:</label>
+		<input type="text" id="nextTask" readonly>
+		<button onclick="getNextTask()">Next Task</button>
+	</div>
+</body>
+<script>
+    let tasks = [];
+
+    function addTask() {
+        let taskInput = document.getElementById("task");
+        let taskList = document.getElementById("taskList");
+        if (taskInput.value.trim() != "") {
+            tasks.push(taskInput.value);
+            updateTaskList(taskList);
+            taskInput.value = "";
+        }
+    }
+
+    function updateTaskList(taskList) {
+        taskList.value = "";
+        for (let i = 0; i < tasks.length; i++) {
+            taskList.value += tasks[i] + "\n";
+        }
+    }
+
+    function getNextTask() {
+        let nextTaskInput = document.getElementById("nextTask");
+        if (tasks.length > 0) {
+            nextTaskInput.value = tasks.shift();
+            updateTaskList(document.getElementById("taskList"));
+        } else {
+            nextTaskInput.value = "No more tasks!";
+        }
+    }
+
+    window.onload = function() {
+        updateTaskList(document.getElementById("taskList"));
+    }
+</script>
+</html>

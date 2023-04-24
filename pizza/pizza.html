@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pizzacorner Order Form</title>
+</head>
+<body>
+	<h1>Pizzacorner Order Form</h1>
+	<form>
+		<label for="size">Pizza Size:</label>
+		<select id="size" onchange="calculateTotal()">
+			<option value="small">Small (₹99)</option>
+			<option value="medium">Medium (₹199)</option>
+			<option value="large">Large (₹399)</option>
+		</select><br><br>
+
+		<input type="checkbox" id="deep-pan" onclick="calculateTotal()">
+		<label for="deep-pan">Deep Pan (add ₹20)</label><br><br>
+
+		<label for="toppings">Extra Toppings:</label><br>
+		<input type="checkbox" name="topping" value="mushrooms" onclick="calculateTotal()">Mushrooms (add ₹15)<br>
+		<input type="checkbox" name="topping" value="olives" onclick="calculateTotal()">Olives (add ₹10)<br>
+		<input type="checkbox" name="topping" value="fingernail" onclick="calculateTotal()">Fingernail (add ₹30)<br>
+		<input type="checkbox" name="topping" value="spicy-beef" onclick="calculateTotal()">Spicy Beef (add ₹20)<br><br>
+
+		<input type="checkbox" id="home-delivery" onclick="calculateTotal()">
+		<label for="home-delivery">Home Delivery (add ₹25)</label><br><br>
+
+		<div id="total"></div>
+	</form>
+</body>
+<script src="pizza.js"></script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To do list</title>
+    <link rel="stylesheet" href="todolist.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To do list</h1>
+        <br>Add task:&nbsp 
+        <input type="text" id="addTaskBox">
+        <input type="button" id="addTaskBtn" value="Add Task" onclick="addTask()">
+        <br>
+
+        <br>Task list:&nbsp&nbsp
+        <textarea  type="text" id="taskListBox" rows="8" cols="50" readonly></textarea>
+        <br>
+
+        <br>Next task: 
+        <input type="text" id="nextTaskBox">
+        <input type="button" id="nextTaskBtn" value="Show Next Task" onclick="nextTask()">
+        <br>
+    </div>
+</body>
+<script src="tasks.js"></script>
+</html>

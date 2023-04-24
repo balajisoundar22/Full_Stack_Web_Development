@@ -1,0 +1,28 @@
+body {
+    text-align: left;
+}
+
+h1 {
+    color: blue;
+}
+
+.container {
+    border: 5px solid blue;
+    display: block;
+    width: 600px;
+    margin: auto auto;
+    padding: 10px 10px;
+    height: auto;
+}
+
+#addTaskBox {
+    width: 300px;
+}
+
+#taskListBox {
+    width: 300px;
+}
+
+#nextTaskBox {
+    width: 300px;
+}

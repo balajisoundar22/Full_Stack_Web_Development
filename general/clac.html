@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+
+		input[type=button] {
+			width: 50px;
+			height: 50px;
+			font-size: 20px;
+			margin: 5px;
+			background-color: #f0f0f0;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		input[type=text] {
+			width: 200px;
+			height: 50px;
+			font-size: 20px;
+			margin: 5px;
+			text-align: right;
+			border: none;
+			border-radius: 5px;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Calculator</h2>
+	<input type="text" id="result" value="0" readonly>
+	<br>
+	<input type="button" value="1" onclick="insert('1')">
+	<input type="button" value="2" onclick="insert('2')">
+	<input type="button" value="3" onclick="insert('3')">
+	<input type="button" value="+" onclick="insert('+')">
+	<input type="button" value="-" onclick="insert('-')">
+	<br>
+	<input type="button" value="4" onclick="insert('4')">
+	<input type="button" value="5" onclick="insert('5')">
+	<input type="button" value="6" onclick="insert('6')">
+	<input type="button" value="*" onclick="insert('*')">
+	<input type="button" value="/" onclick="insert('/')">
+	<br>
+	<input type="button" value="7" onclick="insert('7')">
+	<input type="button" value="8" onclick="insert('8')">
+	<input type="button" value="9" onclick="insert('9')">
+	<input type="button" value="^" onclick="insert('**')">
+	<input type="button" value="√" onclick="sqrt()">
+	<br>
+	<input type="button" value="0" onclick="insert('0')">
+	<input type="button" value="." onclick="insert('.')">
+	<input type="button" value="%" onclick="percentage()">
+	<input type="button" value="AC" onclick="clearResult()">
+	<input type="button" value="=" onclick="calculate()">
+	<script>
+		let result = document.getElementById('result');
+		let operation = '';
+
+		function insert(num) {
+			if (result.value == '0') {
+				result.value = num;
+			} else {
+				result.value += num;
+			}
+		}
+
+		function clearResult() {
+			result.value = '0';
+		}
+
+		function calculate() {
+			result.value = eval(result.value);
+		}
+
+		function sqrt() {
+			result.value = Math.sqrt(result.value);
+		}
+
+		function percentage() {
+			result.value = eval(result.value + '/100');
+		}
+	</script>
+</body>
+</html>

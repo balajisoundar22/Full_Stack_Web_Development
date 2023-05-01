@@ -5,4 +5,4 @@ let currentColor = 0;
 colorSwapper.addEventListener("click", function() {
   currentColor = (currentColor + 1) % colors.length;
   colorSwapper.src = colors[currentColor];
-});
+}); 

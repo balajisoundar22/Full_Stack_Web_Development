@@ -1,30 +1,63 @@
-function insert(char) {
-    document.getElementById('input').value += char;
-  }
-  
-  function clearInput() {
-    document.getElementById('input').value = '';
-  }
-  
-  function backspace() {
-    var input = document.getElementById('input');
-    input.value = input.value.substring(0, input.value.length - 1);
-  }
-  
-  function calculate() {
-    var input = document.getElementById('input').value;
-    var output = eval(input);
-    document.getElementById('input').value = output;
-  }
-  
-  function sin(x) {
-    return Math.sin(x);
-  }
-  
-  function cos(x) {
-    return Math.cos(x);
-  }
-  
-  function tan(x) {
-    return Math.tan(x);
-  }  
+let result = document.getElementById('box');
+		let operation = '';
+
+		function insert(num) {
+			if (result.value == '0') {
+				result.value = num;
+			} else {
+				result.value += num;
+			}
+		}
+
+		function clearResult() {
+			result.value = '0';
+		}
+
+		function calculate() {
+			result.value = eval(result.value);
+		}
+
+		function sqrt() {
+			result.value = Math.sqrt(result.value);
+		}
+
+		function percentage() {
+			result.value = eval(result.value + '/100');
+		}
+
+    function sin() {
+      result.value = Math.sin(result.value);
+    }
+
+    function cos() {
+      result.value = Math.cos(result.value);
+    }
+
+    function tan() {
+      result.value = Math.tan(result.value);
+    }
+
+    function log() {
+      result.value = Math.log(result.value);
+    }
+
+    function log10() {
+      result.value = Math.log10(result.value);
+    }
+
+    function abs() {
+      result.value = Math.abs(result.value);
+    }
+
+    function factorial() {
+      var x = result.value;
+      var res = 1;
+      for (var i = 2; i <= x; i++) {
+        res *= i;
+      }
+      result.value = res;
+    }
+
+    function round() {
+      result.value = Math.round(result.value);
+    }

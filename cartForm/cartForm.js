@@ -1,7 +1,7 @@
 function generateForm() {
     const city = document.getElementById('city').value.toLowerCase();
     let maxItems;
-
+ 
     switch (city) {
         case 'chennai':
             maxItems = 15;
@@ -30,13 +30,19 @@ function generateForm() {
     for (let i = 1; i <= maxItems; i++) {
         const label = document.createElement('label');
         label.for = `item-${i}`;
-        label.innerText = `Item ${i}: `;
+        if (`${i}` > 9 ) {
+            label.innerText = `Item ${i}:`;
+        } else {
+            label.innerText = `Item ${i}: `;
+        }
+        
 
         const input = document.createElement('input');
         input.type = 'text';
         input.id = `item-${i}`;
         input.name = `item-${i}`;
         input.min = '0';
+        input.className = 'items';
 
         const br = document.createElement('br');
 

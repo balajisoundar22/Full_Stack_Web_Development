@@ -1,0 +1,34 @@
+body {
+    background-image: url('img.jpg');
+    background-size: 100%;
+    font-weight: bold;
+} 
+
+ .container {
+    text-align: center;
+
+    display: block;
+    width: 300px;
+    margin: auto auto;
+
+    background-color: rgba(252,133,0,.3);
+
+    color: rgba(2, 48, 71, .9);
+ }
+
+ .items {
+    margin: 3px 1px;
+    padding: 3px 2px;
+ }
+
+ #city {
+    margin: 3px 1px;
+    padding: 3px 2px;
+ }
+
+ #btn {
+    background-color: rgba(33, 158, 188);
+    border: 1px solid bisque;
+    padding: 3px 5px;
+    border-radius: 5px;
+ }

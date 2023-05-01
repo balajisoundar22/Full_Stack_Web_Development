@@ -16,4 +16,4 @@ parts.forEach(part => {
   const partItem = document.createElement('div');
   partItem.innerHTML = `${partName}: ${partFeatures}<br>`;
   partsList.appendChild(partItem);
-});
+}); 

@@ -13,7 +13,7 @@ function strengthen(str) {
 function emphasize(str) {
   return "doubleplus" + str;
 }
-
+ 
 // Attach an event listener to the input textbox
 // input.addEventListener("input", () => {
 //   const str = input.value;

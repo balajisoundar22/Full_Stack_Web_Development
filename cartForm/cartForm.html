@@ -4,7 +4,8 @@
 	<title>Order Form</title>
     <link rel="stylesheet" href="cartForm.css">
 </head>
-<body>
+<body> 
+    <div class="container">
 	<h1>Order Form</h1>
 	<form>
 		<label for="city">City:</label>
@@ -20,9 +21,11 @@
         </select>
         
 		<!-- <input type="text" id="city" name="city"> -->
-		<button type="button" onclick="generateForm()">Generate Form</button>
+		<button type="button" id="btn" onclick="generateForm()">Generate Form</button>
 	</form>
 	<div id="item-list"></div>
+    <button type="button" id="btn" onclick="window.print()">Print Form</button>
+    </div>
 </body>
 <script src="cartForm.js"></script>
 </html>

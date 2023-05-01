@@ -2,10 +2,14 @@
 <html>
 <head>
 	<title>Pizzacorner Order Form</title>
+	<link rel="stylesheet" href="pizza.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 <body>
 	<h1>Pizzacorner Order Form</h1>
-	<form>
+	<form class="container">
 		<label for="size">Pizza Size:</label>
 		<select id="size" onchange="calculateTotal()">
 			<option value="small">Small (₹99)</option>
@@ -25,8 +29,9 @@
 		<input type="checkbox" id="home-delivery" onclick="calculateTotal()">
 		<label for="home-delivery">Home Delivery (add ₹25)</label><br><br>
 
-		<div id="total"></div>
+		<div id="total">Total: ₹ </div>
 	</form>
 </body>
 <script src="pizza.js"></script>
 </html>
+ 

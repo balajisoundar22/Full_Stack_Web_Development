@@ -11,7 +11,7 @@ function calculateTotal() {
         total += 399;
     }
 
-    // check if deep pan
+    // check if deep pan 
     var isDeepPan = document.getElementById("deep-pan").checked;
     if (isDeepPan) {
         total += 20;

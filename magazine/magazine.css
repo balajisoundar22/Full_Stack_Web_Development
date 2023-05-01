@@ -1,0 +1,50 @@
+ body {
+    background-image: url('img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+ }
+
+ h1 {
+    font-style: italic;
+    text-decoration: underline;
+ }
+
+ .container {
+    display: block;
+    width: 600px;
+    margin: auto auto;
+    background-color: rgba(0, 255, 255, .5);
+
+    padding: 10px 2px;
+ }
+
+ label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
+ }
+
+ #input {
+    padding: 10px 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+ }
+
+ #btn {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+ }
+
+ #output {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px 10px;
+ }

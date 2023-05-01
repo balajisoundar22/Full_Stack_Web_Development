@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Adithi Vending Machine</title>
+    <link rel="stylesheet" href="vending.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vending Machine</h1>
+        <b><label for="size">Select Stationery Id:</label></b>
+        <select name = "itemId" id="itemId">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        </select>
+        <br><br>
+        <button onclick="sale()">Purchase</button>
+        <button onclick="checkStock()">Check Stock</button>
+        <br><br>
+        <h3><label id="result"></label></h3>
+    </div>
+    <script src = "vending.js"></script>
+</body>
+</html> 

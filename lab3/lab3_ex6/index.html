@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example</title>
+</head>
+<body>
+  <p>This is the first paragraph.</p>
+  <p>This is the second paragraph.</p>
+  <p>This is the third paragraph.</p>
+  <p>This is the fourth paragraph.</p>
+
+  <script>
+    // Get all paragraphs using tag name
+    var paragraphs = document.querySelectorAll('p');
+
+    // Loop through the paragraphs and apply different colors
+    for (var i = 0; i < paragraphs.length; i++) {
+      var paragraph = paragraphs[i];
+
+      if (i % 2 === 0) {
+        // Apply green color to the first and third paragraphs
+        paragraph.style.color = 'green';
+      } else {
+        // Apply red color to the second and fourth paragraphs
+        paragraph.style.color = 'red';
+      }
+    }
+  </script>
+</body>
+</html>

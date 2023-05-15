@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CA5314: Full Stack Laboratory</title>
+  <style>
+    /* Styles for completed challenges */
+    .completed {
+      background-color: green;
+    }
+
+    /* Styles for ongoing challenges */
+    .ongoing {
+      background-color: yellow;
+    }
+
+    /* Styles for coming challenges */
+    .coming {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1 id="challengeYear">Code Challenge 2023</h1>
+    <h2 id="currentDate">Date: 15/05/2023</h2>
+    <h3>MCA Association</h3>
+    <ul>
+      <li id="challenge1">AI & Generative AI</li>
+      <li id="challenge2">CX & Digital Experience</li>
+      <li id="challenge3">Code Automation</li>
+      <li id="challenge4">Connected Product and Services</li>
+      <li id="challenge5">Data World and Cloud Computing</li>
+      <li id="challenge6">Quantum Computing</li>
+      <li id="challenge7">Robotics and Quality Engineering</li>
+    </ul>
+  </div>
+
+  <script>
+    // Function to change the year color every 3 seconds
+    function changeYearColor() {
+      var yearElement = document.getElementById('challengeYear');
+      setInterval(function() {
+        yearElement.style.color = getRandomColor();
+      }, 3000);
+    }
+
+    // Function to change the date and time background color every second
+    function changeDateTimeColor() {
+      var dateTimeElement = document.getElementById('currentDate');
+      setInterval(function() {
+        dateTimeElement.style.backgroundColor = getRandomColor();
+      }, 1000);
+    }
+
+    // Function to generate a random color in hexadecimal format
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Apply styles and functionality to the challenges
+    document.addEventListener('DOMContentLoaded', function() {
+      var challenges = document.querySelectorAll('li');
+
+      // Apply completed challenge styles
+      for (var i = 0; i < 3; i++) {
+        challenges[i].classList.add('completed');
+      }
+
+      // Apply ongoing challenge styles
+      for (var i = 3; i < 5; i++) {
+        challenges[i].classList.add('ongoing');
+      }
+
+      // Apply coming challenge styles
+      for (var i = 5; i < challenges.length; i++) {
+        challenges[i].classList.add('coming');
+      }
+
+      // Start changing the year color
+      changeYearColor();
+
+      // Start changing the date and time background color
+      changeDateTimeColor();
+    });
+  </script>
+</body>
+</html>
